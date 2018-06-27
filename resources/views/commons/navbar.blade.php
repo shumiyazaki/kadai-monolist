@@ -13,6 +13,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+                                ランキング
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('ranking.want') }}">Wantランキング</a></li>
+                                <li><a href="{{ route('ranking.have') }}">haveランキング</a></li>
+                            </ul>
+                        </li>
                         <li>
                              <a href="{{ route('items.create') }}">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -49,5 +62,3 @@
         </div>
     </nav>
 </header>
-   <li>
-                        
